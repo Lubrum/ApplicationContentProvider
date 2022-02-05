@@ -13,9 +13,10 @@
             android:name=".database.NotesProvider"
             android:authorities="com.courses.applicationcontentprovider.provider"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

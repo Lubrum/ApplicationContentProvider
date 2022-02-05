@@ -46,8 +46,8 @@ class NotesDetailFragment: DialogFragment(), DialogInterface.OnClickListener {
 
             if (cursor?.moveToNext() as Boolean ) {
                 newNote = false
-                noteEditTitle.setText(cursor.getString(cursor.getColumnIndex(TITLE_NOTES)))
-                noteEditDescription.setText(cursor.getString(cursor.getColumnIndex(DESCRIPTION_NOTES)))
+                noteEditTitle.setText(cursor.getString(cursor.getColumnIndexOrThrow(TITLE_NOTES)))
+                noteEditDescription.setText(cursor.getString(cursor.getColumnIndexOrThrow(DESCRIPTION_NOTES)))
             }
             cursor.close()
         }
